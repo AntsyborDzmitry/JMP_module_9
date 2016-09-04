@@ -13,22 +13,23 @@ public class Main {
 
         // instantiate bean by type
         ShopLauncher s2 = (ShopLauncher)context.getBean(ShopLauncher.class);
+        s2.setShopName("Amazon");
 
         // instantiate bean by name and type
         ShopLauncher s3 = (ShopLauncher)context.getBean("shopLauncher",ShopLauncher.class );
+        s3.setShopName("Ebay");
 
         // instantiate bean by alias
         ShopLauncher s4 = (ShopLauncher)context.getBean("my-alias");
+        s4.setShopName("Walmart");
+
 
         s1.main();
 
-        s2.setShopName("Amazon");
         s2.main();
 
-        s3.setShopName("Ebay");
         s3.main();
 
-        s4.setShopName("Walmart");
         s4.main();
     }
 }
